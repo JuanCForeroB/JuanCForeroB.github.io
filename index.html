@@ -70,7 +70,7 @@
 
         <!-- This element will contain our vega-lite chart -->
         <figure id="Graph1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-
+        <figure id="Graph2"></figure>
     </section>
 
    <section>
@@ -114,8 +114,8 @@
         let graph_1 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartBar3.json"; // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Graph1', graph_1) // We're using the vegaEmbed function to put a graph in the element with id figure_1
     
-        let figure_2_spec = "wk1_chart2.json";
-        vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_2
+        let graph_2 = Graph2.json";
+        vegaEmbed('#Location2', graph_2) // We're using the vegaEmbed function to put a graph in the element with id figure_2
                    
         let figure_3_spec = "wk1_chart1.json";
         vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_3

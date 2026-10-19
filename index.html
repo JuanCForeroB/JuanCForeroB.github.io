@@ -112,16 +112,8 @@
         // This is a comment in JavaScript - it's a different language to HTML and CSS
 
         let graph_1 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartBar3.json"; // We're storing the URL of the graph we want to display in a variable
-        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-
         vegaEmbed('#Graph1', graph_1) // We're using the vegaEmbed function to put a graph in the element with id figure_1
     
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_2_spec, adding VegaEmbed for Location2, and adding a new section in the HTML
-        // e.g. 
-        // let figure_2_spec = ...
-        // vegaEmbed('#Location2', figure_2_spec)
-
         let figure_2_spec = "wk1_chart2.json";
         vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_2
                    

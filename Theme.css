@@ -1,0 +1,167 @@
+/* General settings */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f7f3eb;
+  --ivory: #fffdf8;
+  --petrol: #123f49;
+  --aqua: #087f83;
+  --mint: #a8ddd3;
+  --text: #33474b;
+  --border: #d9e3dc;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--cream);
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 70px;
+}
+
+/* Main header */
+header {
+  background: var(--petrol);
+  color: var(--cream);
+  padding: clamp(28px, 6vw, 60px);
+  margin-bottom: 40px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative aqua accent */
+header::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -90px;
+  top: -100px;
+  border: 35px solid rgba(168, 221, 211, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+header h1,
+header .big {
+  position: relative;
+  margin: 0 0 16px;
+  color: var(--cream);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+header p {
+  max-width: 620px;
+  color: #d5e8e3;
+}
+
+header a {
+  color: var(--mint);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--petrol);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.small {
+  font-size: 1.15rem;
+}
+
+/* Sections */
+section {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(20px, 4vw, 36px);
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(18, 63, 73, 0.04);
+}
+
+/* Small accent above each section title */
+.chart-description::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 5px;
+  background: var(--aqua);
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.chart-description p {
+  max-width: 720px;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+/* Links */
+a {
+  color: var(--aqua);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--aqua);
+  outline-offset: 4px;
+}
+
+/* Charts */
+figure {
+  margin: 28px 0;
+}
+
+/* Override VegaEmbed's default display */
+figure.vega-embed,
+figure#Graph1,
+figure#Graph2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+.chart-description + figure {
+  margin-top: 30px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: var(--text);
+}

@@ -190,14 +190,9 @@ footer {
 
 .portfolio-banner p {
   color: #334f54;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   font-weight: 400;
-  max-width: 680px;
-  margin: 0;
-}
-
-.portfolio-banner p {
   max-width: none;
-  font-size: 0.95rem;
+  margin: 0;
 }

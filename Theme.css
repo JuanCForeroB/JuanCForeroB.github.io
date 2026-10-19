@@ -192,3 +192,8 @@ footer {
   max-width: 680px;
   margin: 0;
 }
+
+.portfolio-banner p {
+  max-width: none;
+  font-size: 0.95rem;
+}

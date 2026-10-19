@@ -35,6 +35,10 @@ header {
   position: relative;
   overflow: hidden;
 }
+header .small {
+  max-width: none;
+  font-size: 1rem;
+}
 
 /* Decorative aqua accent */
 header::after {

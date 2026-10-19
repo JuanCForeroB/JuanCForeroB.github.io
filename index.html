@@ -73,34 +73,6 @@
         <figure id="Graph2"></figure>
     </section>
 
-   <section>
-        <div class="chart-description">
-            <h2>Section 2: A line chart (additional chart)</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                In this graph we can see the trend of real GDP Per Capita across different countries over time. The data is sourced from  XXX and visualized using a line chart. 
-            </p>
-        </div>
-
-        <!-- This element will contain our vega-lite chart -->
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-
-    </section>
-
-   <section>
-        <div class="chart-description">
-            <h2>Section 3: A bar graph (additional chart)</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                In this graph we can see the distribution of GDP Per Capita across different countries. The data is sourced from  XXX and visualized using a bar chart. 
-            </p>
-        </div>
-
-        <!-- This element will contain our vega-lite chart -->
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-
-    </section>
-
-
-
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
@@ -114,12 +86,10 @@
         let graph_1 = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/library/chartBar3.json"; // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Graph1', graph_1) // We're using the vegaEmbed function to put a graph in the element with id figure_1
     
-        let graph_2 = Graph2.json";
+        let graph_2 = "Graph2.json";
         vegaEmbed('#Graph2', graph_2) // We're using the vegaEmbed function to put a graph in the element with id figure_2
                    
-        let figure_3_spec = "wk1_chart1.json";
-        vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_3
-
+    
 
 
     </script>

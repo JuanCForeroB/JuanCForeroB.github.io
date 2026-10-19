@@ -165,3 +165,33 @@ footer {
   font-size: 0.9rem;
   color: var(--text);
 }
+
+portfolio-banner {
+  background: #b8e3dc;
+  color: #123f49;
+  padding: 28px 32px;
+  margin: 0 0 32px;
+  border-radius: 18px;
+  border: 1px solid #9cd2c9;
+}
+
+.portfolio-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.portfolio-banner h2 {
+  color: #123f49;
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.portfolio-banner p {
+  color: #234f57;
+  margin: 0;
+  max-width: 650px;
+}
+

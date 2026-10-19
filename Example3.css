@@ -65,3 +65,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+#Graph1,
+#Graph2 {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}

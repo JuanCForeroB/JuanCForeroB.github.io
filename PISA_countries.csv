@@ -1,13 +1,37 @@
-﻿Category,Mathematics,Reading ,Science
-Argentina,367,389,393
-Brazil,377,408,409
-Chile,403,436,442
-Colombia,381,399,414
-Costa Rica,387,416,424
-Dominican Republic,339,346,361
-Ecuador,366,385,393
-Guatemala,334,337,351
-Mexico,388,408,414
-OECD average,463,461,482
-Paraguay,334,352,355
-Peru,382,390,406
+﻿Category,Category,Score
+Argentina,Mathematics,367
+Brazil,Mathematics,377
+Chile,Mathematics,403
+Colombia,Mathematics,381
+Costa Rica,Mathematics,387
+Dominican Republic,Mathematics,339
+Ecuador,Mathematics,366
+Guatemala,Mathematics,334
+Mexico,Mathematics,388
+OECD average,Mathematics,463
+Paraguay,Mathematics,334
+Peru,Mathematics,382
+Argentina,Reading,389
+Brazil,Reading,408
+Chile,Reading,436
+Colombia,Reading,399
+Costa Rica,Reading,416
+Dominican Republic,Reading,346
+Ecuador,Reading,385
+Guatemala,Reading,337
+Mexico,Reading,408
+OECD average,Reading,461
+Paraguay,Reading,352
+Peru,Reading,390
+Argentina,Science,393
+Brazil,Science,409
+Chile,Science,442
+Colombia,Science,414
+Costa Rica,Science,424
+Dominican Republic,Science,361
+Ecuador,Science,393
+Guatemala,Science,351
+Mexico,Science,414
+OECD average,Science,482
+Paraguay,Science,355
+Peru,Science,406

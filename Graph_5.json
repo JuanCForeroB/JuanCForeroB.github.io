@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#FFFDF8",
+  "title": {
+    "text": "How does Colombia compare in PISA?",
+    "subtitle": [
+      "Mathematics, reading and science",
+      "Selected Latin American countries and OECD average | Source: OECD"
+    ],
+    "anchor": "start",
+    "color": "#123F49",
+    "fontSize": 20,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#64748B",
+    "subtitlePadding": 8,
+    "offset": 20
+  },
+  "width": 650,
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JuanCForeroB/JuanCForeroB.github.io/refs/heads/main/PISA_countries.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelAngle": -45}
+    },
+    "xOffset": {
+      "field": "Subject",
+      "sort": ["Mathematics", "Reading", "Science"]
+    },
+    "y": {"field": "Score", "type": "quantitative", "title": "PISA score"},
+    "color": {
+      "field": "Subject",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Mathematics", "Reading", "Science"],
+        "range": ["#123F49", "#D97706", "#397DB8"]
+      },
+      "legend": {"title": null, "orient": "top"}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Subject", "type": "nominal"},
+      {"field": "Score", "type": "quantitative", "format": ".0f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "domain": false,
+      "gridColor": "#E3E8E5",
+      "labelColor": "#475569",
+      "titleFontWeight": "normal"
+    }
+  }
+}

@@ -73,13 +73,34 @@
     </section>
 
        <section>
-        <div class="chart-description">
+         <div class="chart-description">
             <h2> CC2 | Building </h2>
+        </div>
+        <div class="charts-row">
+        <figure id="Graph3"></figure>
+        <figure id="Graph4"></figure>
         </div>
     </section>
 
-    
-    
+  <section>
+        <div class="chart-description">
+            <h2> CC3 | Policy debate </h2>
+
+        <p style="text-align: center; font-weight: 700; font-style: italic;
+          max-width: 750px; margin: 24px auto;"> 
+          Should Colombia prioritise policies to improve students basic mathematics skills, narrow socioeconomic achievement gaps, and strengthen educational outcomes relative to other OECD member countries? 
+        </p>
+
+          <p>
+            Colombia is lagged behind some Lain American peers and the OECD average. Uneven recent progress higlights the need fot policies to improve educational outcomes
+        </p>
+
+        </div>
+        <figure id="Graph5"></figure>
+        <figure id="Graph6"></figure>
+
+        </div>
+    </section>
 
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
@@ -90,10 +111,18 @@
     
         let graph_2 = "Graph2.json";
         vegaEmbed('#Graph2', graph_2) // We're using the vegaEmbed function to put a graph in the element with id figure_2
-                   
+
+        let graph_3="Graph3.json";
+        vegaEmbed ('#Graph3', graph_3)           
     
-
-
+        let graph_4="Graph4.json";
+        vegaEmbed ('#Graph4', graph_4)      
+ 
+        let graph_5="Graph_5.json";
+        vegaEmbed ('#Graph5', graph_5)           
+    
+        let graph_6="Graph_6.json";
+        vegaEmbed ('#Graph6', graph_6)    
     </script>
 
 </body>

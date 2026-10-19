@@ -115,7 +115,8 @@ section {
 }
 
 .chart-description p {
-  max-width: 720px;
+  max-width: none;
+  text-align: justify;
 }
 
 p {
@@ -195,4 +196,45 @@ footer {
   font-weight: 400;
   max-width: none;
   margin: 0;
+}
+.charts-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.charts-row > figure {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stack charts on smaller screens */
+@media (max-width: 700px) {
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .charts-row > figure {
+    width: 100%;
+  }
+}
+
+/* Justify paragraphs */
+p {
+  text-align: justify;
+}
+
+/* Keep header paragraphs left-aligned */
+header p {
+  text-align: left;
+}
+
+/* Keep the policy question centred, bold and italic */
+.chart-description p.policy-question {
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
 }

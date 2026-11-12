@@ -568,3 +568,13 @@ header.compact-header::after {
     gap: 20px;
   }
 }
+
+header.compact-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.cc-menu {
+  top: 160px;
+  max-height: calc(100vh - 184px);
+}

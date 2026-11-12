@@ -269,8 +269,8 @@ page-links {
 
 /* Portfolio: dark background */
 .card-portfolio {
-  background: #31594E;
-  background: var(--petrol);
+  background: #31594E; 
+  color: var(--cream);
 }
 
 /* Project: light background */

@@ -19,7 +19,9 @@
         - Tags appear as an opening <div> and closing </div> pair
     -->
 
-<head>    
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
 
     <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
@@ -42,7 +44,7 @@
 
     </style>
 </head>
-<body>
+<<body class="portfolio-page">>
     <header>
         <h1 class="big"> Juan Camilo Forero Buitrago </h1>
         <p>
@@ -52,6 +54,16 @@
       <span class="course-term">Autumn Term 2026/27</span>
         </p>
     </header>
+
+<div class="portfolio-layout">
+  <nav class="cc-menu" aria-label="Weekly task">
+    <strong>Challenges</strong>
+    <a href="#cc1">CC1 · Hosting</a>
+    <a href="#cc2">CC2 · Building</a>
+    <a href="#cc3">CC3 · Policy debate</a>
+  </nav>
+
+  <main class="portfolio-content">
 
 <div class="portfolio-banner">
     <h2> Portfolio</h2>
@@ -125,6 +137,6 @@
         vegaEmbed ('#Graph6', graph_6)    
     </script>
 
-</body>
+</<body class="portfolio-page">>
     
 </html>

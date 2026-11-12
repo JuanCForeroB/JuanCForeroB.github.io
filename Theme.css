@@ -360,3 +360,73 @@ page-links {
   grid-template-columns: 1fr;
   gap: 32px;
 }
+
+body.portfolio-page {
+  max-width: 1200px;
+}
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.cc-menu {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 12px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.cc-menu strong {
+  padding: 0 10px 10px;
+  color: var(--petrol);
+}
+
+.cc-menu a {
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--petrol);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cc-menu a:hover,
+.cc-menu a:focus-visible {
+  background: #d9eeea;
+  text-decoration: none;
+}
+
+.portfolio-content {
+  min-width: 0;
+}
+
+.portfolio-content section[id] {
+  scroll-margin-top: 24px;
+}
+
+@media (max-width: 800px) {
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-menu {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: none;
+  }
+
+  .cc-menu strong {
+    width: 100%;
+  }
+}

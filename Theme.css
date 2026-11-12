@@ -354,3 +354,8 @@ page-links {
     transform: none;
   }
 }
+.page-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}

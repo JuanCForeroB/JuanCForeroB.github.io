@@ -461,3 +461,109 @@ body.portfolio-page {
   background: #bddbd5;
   text-decoration: none;
 }
+header.compact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  background: var(--petrol);
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: 32px;
+  border-radius: 20px;
+}
+
+/* Círculo decorativo más discreto */
+header.compact-header::after {
+  width: 160px;
+  height: 160px;
+  top: -100px;
+  right: -60px;
+  border-width: 24px;
+  opacity: 0.5;
+}
+
+.compact-header .header-info,
+.compact-header .header-buttons {
+  position: relative;
+  z-index: 1;
+}
+
+.compact-header .header-info {
+  min-width: 0;
+}
+
+.compact-header h1 {
+  color: var(--cream);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin: 0 0 12px;
+}
+
+.compact-header .header-course {
+  color: #d5e8e3;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+.compact-header .header-course span {
+  display: block;
+}
+
+.compact-header .header-social {
+  display: flex;
+  gap: 16px;
+}
+
+.compact-header .header-social a {
+  color: var(--mint);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.compact-header .header-social a:hover {
+  text-decoration: underline;
+}
+
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compact-header .header-buttons a {
+  padding: 9px 16px;
+  border: 1px solid rgba(168, 221, 211, 0.35);
+  border-radius: 10px;
+  background: #08666A;
+  color: var(--cream);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.compact-header .header-buttons a:hover {
+  background: #075357;
+}
+
+.compact-header .header-buttons a[aria-current="page"] {
+  background: var(--mint);
+  border-color: var(--mint);
+  color: var(--petrol);
+}
+
+.compact-header .header-buttons a:focus-visible {
+  outline: 3px solid var(--cream);
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  header.compact-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

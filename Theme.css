@@ -624,6 +624,14 @@ header.compact-header .header-buttons a {
   scroll-margin-top: 180px;
 }
 
+header.compact-header {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  padding: 20px clamp(24px, 4vw, 80px);
+}
 .portfolio-layout {
   position: relative;
   z-index: 0;

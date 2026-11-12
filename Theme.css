@@ -593,3 +593,33 @@ nav.cc-menu > a {
   justify-content: center;
   text-align: center;
 }
+
+header.compact-header {
+  padding: 16px 24px;
+  gap: 20px;
+}
+
+header.compact-header h1 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-bottom: 6px;
+}
+
+header.compact-header .header-course {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+header.compact-header .header-social a {
+  font-size: 0.75rem;
+}
+
+header.compact-header .header-buttons a {
+  padding: 7px 12px;
+  font-size: 0.8rem;
+}
+
+/* Deja espacio para el banner al pulsar un CC */
+.portfolio-content section[id] {
+  scroll-margin-top: 180px;
+}

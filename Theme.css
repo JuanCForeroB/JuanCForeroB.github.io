@@ -632,6 +632,11 @@ header.compact-header {
   border-radius: 0;
   padding: 20px clamp(24px, 4vw, 80px);
 }
+
+body.portfolio-page {
+  padding-top: 0;
+}
+
 .portfolio-layout {
   position: relative;
   z-index: 0;

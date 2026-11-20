@@ -267,6 +267,14 @@ page-links {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card-portfolio p {
+  max-width: 60ch;
+}
+
+.page-card p.card-course {
+  max-width: none;
+}
+
 /* Portfolio: dark background */
 .card-portfolio {
   background: #08666A; 
@@ -619,7 +627,6 @@ header.compact-header .header-buttons a {
   font-size: 0.8rem;
 }
 
-/* Deja espacio para el banner al pulsar un CC */
 .portfolio-content section[id] {
   scroll-margin-top: 180px;
 }

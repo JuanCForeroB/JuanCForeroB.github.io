@@ -1,0 +1,101 @@
+country,leader,confidence_pct,country_order
+Canada,Donald Trump,22,1
+Canada,Emmanuel Macron,62,1
+Canada,Xi Jinping,26,1
+Canada,Vladimir Putin,13,1
+Hungary,Donald Trump,53,2
+Hungary,Emmanuel Macron,42,2
+Hungary,Xi Jinping,34,2
+Hungary,Vladimir Putin,32,2
+UK,Donald Trump,37,3
+UK,Emmanuel Macron,60,3
+UK,Xi Jinping,31,3
+UK,Vladimir Putin,15,3
+Greece,Donald Trump,37,4
+Greece,Emmanuel Macron,47,4
+Greece,Xi Jinping,37,4
+Greece,Vladimir Putin,40,4
+Poland,Donald Trump,35,5
+Poland,Emmanuel Macron,46,5
+Poland,Xi Jinping,13,5
+Poland,Vladimir Putin,3,5
+Italy,Donald Trump,32,6
+Italy,Emmanuel Macron,38,6
+Italy,Xi Jinping,30,6
+Italy,Vladimir Putin,19,6
+Netherlands,Donald Trump,22,7
+Netherlands,Emmanuel Macron,71,7
+Netherlands,Xi Jinping,23,7
+Netherlands,Vladimir Putin,10,7
+France,Donald Trump,22,8
+France,Emmanuel Macron,35,8
+France,Xi Jinping,20,8
+France,Vladimir Putin,15,8
+Spain,Donald Trump,19,9
+Spain,Emmanuel Macron,55,9
+Spain,Xi Jinping,25,9
+Spain,Vladimir Putin,8,9
+Germany,Donald Trump,18,10
+Germany,Emmanuel Macron,78,10
+Germany,Xi Jinping,25,10
+Germany,Vladimir Putin,13,10
+Sweden,Donald Trump,15,11
+Sweden,Emmanuel Macron,75,11
+Sweden,Xi Jinping,16,11
+Sweden,Vladimir Putin,5,11
+India,Donald Trump,52,12
+India,Emmanuel Macron,36,12
+India,Xi Jinping,24,12
+India,Vladimir Putin,44,12
+Japan,Donald Trump,38,13
+Japan,Emmanuel Macron,54,13
+Japan,Xi Jinping,8,13
+Japan,Vladimir Putin,8,13
+Indonesia,Donald Trump,34,14
+Indonesia,Emmanuel Macron,45,14
+Indonesia,Xi Jinping,53,14
+Indonesia,Vladimir Putin,60,14
+South Korea,Donald Trump,33,15
+South Korea,Emmanuel Macron,51,15
+South Korea,Xi Jinping,15,15
+South Korea,Vladimir Putin,6,15
+Australia,Donald Trump,22,16
+Australia,Emmanuel Macron,61,16
+Australia,Xi Jinping,17,16
+Australia,Vladimir Putin,8,16
+Israel,Donald Trump,69,17
+Israel,Emmanuel Macron,22,17
+Israel,Xi Jinping,9,17
+Israel,Vladimir Putin,10,17
+Turkey,Donald Trump,16,18
+Turkey,Emmanuel Macron,14,18
+Turkey,Xi Jinping,25,18
+Turkey,Vladimir Putin,35,18
+Nigeria,Donald Trump,79,19
+Nigeria,Emmanuel Macron,46,19
+Nigeria,Xi Jinping,66,19
+Nigeria,Vladimir Putin,45,19
+Kenya,Donald Trump,64,20
+Kenya,Emmanuel Macron,53,20
+Kenya,Xi Jinping,64,20
+Kenya,Vladimir Putin,46,20
+South Africa,Donald Trump,41,21
+South Africa,Emmanuel Macron,33,21
+South Africa,Xi Jinping,46,21
+South Africa,Vladimir Putin,35,21
+Brazil,Donald Trump,34,22
+Brazil,Emmanuel Macron,28,22
+Brazil,Xi Jinping,23,22
+Brazil,Vladimir Putin,17,22
+Argentina,Donald Trump,32,23
+Argentina,Emmanuel Macron,26,23
+Argentina,Xi Jinping,23,23
+Argentina,Vladimir Putin,23,23
+Mexico,Donald Trump,8,24
+Mexico,Emmanuel Macron,30,24
+Mexico,Xi Jinping,36,24
+Mexico,Vladimir Putin,34,24
+24-country median,Donald Trump,34,25
+24-country median,Emmanuel Macron,46,25
+24-country median,Xi Jinping,25,25
+24-country median,Vladimir Putin,16,25

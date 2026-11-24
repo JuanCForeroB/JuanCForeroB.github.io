@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#FFFDF8",
+  "padding": 20,
+  "title": {
+    "text": "Net ODA disbursements as a share of GNI, by donor",
+    "subtitle": "Source: OECD acces via API | Note: flows by provider",
+    "anchor": "start",
+    "color": "#123F49",
+    "fontSize": 19,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#64748B",
+    "offset": 20
+  },
+  "width": 600,
+  "height": 320,
+  "data": {
+    "url": "https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.8/CAN+FRA+DEU+ITA+JPN+GBR+USA._Z.11002..1160..V+Q?endPeriod=2025&dimensionAtObservation=AllDimensions&format=csvfile",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {
+      "field": "TIME_PERIOD",
+      "type": "ordinal",
+      "sort": "ascending",
+      "title": "Year"
+    },
+    "y": {"field": "OBS_VALUE", "type": "quantitative", "title": "% of GNI"},
+    "color": {
+      "field": "DONOR",
+      "type": "value",
+      "title": "Country",
+      "scale": {"scheme": "darkmulti"}
+    },
+    "tooltip": [
+      {"field": "DONOR", "title": "Country"},
+      {"field": "TIME_PERIOD", "type": "ordinal", "title": "Year"},
+      {"field": "OBS_VALUE", "type": "quantitative", "title": "Value"}
+    ]
+  },
+  "config": {}
+}

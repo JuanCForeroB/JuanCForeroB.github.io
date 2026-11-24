@@ -132,34 +132,62 @@
     <figure id="Graph5"></figure>
     <figure id="Graph6"></figure>
   
-  </section> <!-- Aquí termina CC3 -->
+  </section> 
 
   <section id="cc4">
-    <div class="chart-description">
-      <h2>CC4 | Replication, re-create and improve </h2>
+  <div class="chart-description">
+    <h2>CC4 | Replicating and Improving a Chart</h2>
 
-      <p><strong>Original Graph:</strong></p>
-      <img src="Recreate_graph.png" alt="Original chart by Pew Research Center" style="display: block; max-height: 500px; max-width: 100%; width: auto; height: auto; margin: 0 auto;">
-    <p>Original chart by Pew Research Center, Spring 2025 Global Attitudes Survey.
-      Source:
-    <a href="https://www.pewresearch.org/wp-content/uploads/sites/20/2025/06/gap_2025_06_11_us-image-2025_report.pdf#page=50">
-      Spring 2025 Global Attitudes Survey.
-    </p>
-    Source:
-    <a href="https://www.pewresearch.org/wp-content/uploads/sites/20/2025/06/gap_2025_06_11_us-image-2025_report.pdf#page=50">
-      Spring 2025 Global Attitudes Survey.
-    </a>
-  </figcaption>
-</figure>
-      
+    <h3>Original Chart</h3>
+    <figure>
+      <img
+        src="Recreate_graph.png"
+        alt="Pew Research Center chart comparing confidence in Trump, Macron, Xi and Putin across 24 countries"
+        style="display: block; max-height: 500px; max-width: 100%; width: auto; height: auto; margin: 0 auto;"
+      >
+      <figcaption>
+        Source: Pew Research Center,
+        <a href="https://www.pewresearch.org/wp-content/uploads/sites/20/2025/06/gap_2025_06_11_us-image-2025_report.pdf#page=50">
+          Spring 2025 Global Attitudes Survey
+        </a>.
+      </figcaption>
+    </figure>
+
+    <h3>Replicated Chart</h3>
+   <div style="display: flex; justify-content: center;">
+   <div id="Graph7"></div>
+   </div>
+   <h3>Improving Chart</h3>
     </div>
-  </section>
+   <p>I replaced four bar panels with a dot plot on a shared percentage scale, using colour to distinguish leaders and make comparisons within countries easier.</p>
+   <div style="display: flex; justify-content: center;">
+   <div id="Graph8"></div>
+</section>
 
   <section id="cc5">
     <div class="chart-description">
       <h2>CC5 | Accessing data</h2>
-    </div>
-  </section>
+      <h3>API task</h3>
+      <div style="display: flex; justify-content: center;"">
+      <div id="Graph9"></div> </div>
+
+      <p>The chart was constructed with data from the OECD data via API. The base URL is <a href="https://sdmx.oecd.org/public/rest/data/"></a> "https://sdmx.oecd.org/public/rest/data/".</p>
+
+      <p> The request identifies the OECD DAC1 dataflow and its version using <code>OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.8</code>. 
+        After the slash, the filter key starts with the seven G7 donor codes (<code>CAN+FRA+DEU+ITA+JPN+GBR+USA</code>). 
+        The plus signs select multiple donors within the same dimension.</p>
+      <p> The rest of the filter key (<code>._Z.11002..1160..V+Q</code>) sets the sector to “not applicable” (<code>_Z</code>), 
+        selects ODA grant equivalents as a percentage of GNI (<code>11002</code>), and specifies the grant-equivalent flow type (<code>1160</code>). 
+        The two blank positions leave tying status and unit of measure unrestricted. 
+        The request includes both current (<code>V</code>) and constant(<code>Q</code>) prices. </p>
+      <p> The query parameters set 2025 as the latest year (<code>endPeriod=2025</code>), request that all dimensions be included at the observation level (<code>dimensionAtObservation=AllDimensions</code>), and specify CSV as the output format (<code>format=csvfile</code>).</p>
+      <p> The API returns a tidy CSV in long format, with one row per donor and year. This query returns 56 observations for the seven G7 donors from 2018 to 2025.  
+        The chart uses <code>DONOR</code> for the donor country, <code>TIME_PERIOD</code> for the year, and <code>OBS_VALUE</code> for ODA grant equivalents as a percentage of gross national income (GNI). Vega-Lite reads these columns directly without reshaping the data. </p>
+      </div>
+      <p style="text-align: left; overflow-wrap: anywhere;"> <strong>Full API request:</strong><br>https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.8/CAN+FRA+DEU+ITA+JPN+GBR+USA._Z.11002..1160..V+Q?endPeriod=2025&dimensionAtObservation=AllDimensions</p>
+      
+      <h3> Scraper task</h3>
+    </section>
 
   <section id="cc6">
     <div class="chart-description">
@@ -208,7 +236,16 @@
         vegaEmbed ('#Graph5', graph_5)           
     
         let graph_6="Graph_6.json";
-        vegaEmbed ('#Graph6', graph_6)    
+        vegaEmbed ('#Graph6', graph_6)
+
+        let graph_7="Recreation.json";
+        vegaEmbed ('#Graph7', graph_7)  
+        
+        let graph_8="Rebuild.json";
+        vegaEmbed ('#Graph8', graph_8)  
+
+        let graph_9="Graph_9.json"
+        vegaEmbed ('#Graph9', graph_9)
     </script>
 
 </body>

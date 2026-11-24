@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#FFFDF8",
+  "padding": 20,
+  "title": {
+    "text": "Confidence in world leaders across 24 countries",
+    "subtitle": [
+      "Confidence in Trump, Macron, Xi and Putin | Spring 2025",
+      "Source: Pew Research Center, Global Attitudes Survey"
+    ],
+    "anchor": "start",
+    "color": "#123F49",
+    "fontSize": 19,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#64748B",
+    "offset": 20
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/JuanCForeroB/JuanCForeroB.github.io/refs/heads/main/pew-confidence-2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "confidence_pct": "number",
+        "country_order": "number"
+      }
+    }
+  },
+  "transform": [
+    {"filter": "datum.country !== '24-country median'"},
+    {"calculate": "datum.confidence_pct + '%'", "as": "confidence_label"}
+  ],
+  "width": 500,
+  "height": {"step": 25},
+  "mark": {"type": "point", "filled": true, "size": 90, "opacity": 1},
+  "encoding": {
+    "x": {
+      "field": "confidence_pct",
+      "type": "quantitative",
+      "title": [
+        "% who have confidence in each world leader",
+        "to do the right thing regarding world affairs"
+      ],
+      "scale": {"domain": [0, 85], "nice": false},
+      "axis": {"labelExpr": "datum.value + '%'", "grid": false}
+    },
+    "y": {
+      "field": "country",
+      "type": "nominal",
+      "sort": {"field": "country_order", "op": "min", "order": "ascending"},
+      "scale": {"type": "band"},
+      "axis": {"title": null, "grid": true, "tickBand": "extent"}
+    },
+    "color": {
+      "field": "leader",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Donald Trump", "Emmanuel Macron", "Xi Jinping", "Vladimir Putin"],
+        "range": ["#123F49", "#397DB8", "#D97706", "#8A3D78"]
+      },
+      "legend": {"title": null, "orient": "top"}
+    },
+    "tooltip": [
+      {"field": "leader", "type": "nominal", "title": "President"},
+      {"field": "country", "type": "nominal", "title": "Country surveyed"},
+      {"field": "confidence_label", "type": "nominal", "title": "Confidence"}
+    ]
+  },
+  "config": {
+    "font": "Arial",
+    "view": {"stroke": null},
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelFontSize": 11,
+      "labelPadding": 8,
+      "labelColor": "#475569",
+      "titleColor": "#475569",
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "gridColor": "#E3E8E5",
+      "gridDash": [3, 3]
+    },
+    "legend": {
+      "layout": {"top": {"anchor": "middle"}}
+    }
+  }
+}

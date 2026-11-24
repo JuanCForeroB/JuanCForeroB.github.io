@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Confidence in Trump, Macron, Xi and Putin",
+    "subtitle": [
+      "% who have confidence in each world leader, to do the right thing regarding world affairs"
+    ]
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/JuanCForeroB/JuanCForeroB.github.io/refs/heads/main/pew-confidence-2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"confidence_pct": "number", "country_order": "number"}
+    }
+  },
+  "facet": {
+    "column": {
+      "field": "leader",
+      "type": "nominal",
+      "sort": [
+        "Donald Trump",
+        "Emmanuel Macron",
+        "Xi Jinping",
+        "Vladimir Putin"
+      ],
+      "header": {"title": null, "labelFontWeight": "bold"}
+    }
+  },
+  "spacing": 12,
+  "spec": {
+    "width": 120,
+    "height": {"step": 22},
+    "encoding": {
+      "y": {
+        "field": "country",
+        "type": "nominal",
+        "sort": {"field": "country_order", "op": "min", "order": "ascending"},
+        "axis": {"title": null, "domain": false, "ticks": false}
+      },
+      "x": {
+        "field": "confidence_pct",
+        "type": "quantitative",
+        "scale": {"domain": [0, 100]},
+        "axis": null
+      }
+    },
+    "layer": [
+      {
+        "mark": {"type": "bar", "size": 18},
+        "encoding": {
+          "color": {
+            "condition": {
+              "test": "datum.country === '24-country median'",
+              "value": "#6f7736"
+            },
+            "value": "#919d48"
+          }
+        }
+      },
+      {
+        "transform": [
+          {"calculate": "datum.confidence_pct + '%'", "as": "percent_label"}
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 4,
+          "color": "#333"
+        },
+        "encoding": {"text": {"field": "percent_label"}}
+      }
+    ]
+  },
+  "config": {}
+}
